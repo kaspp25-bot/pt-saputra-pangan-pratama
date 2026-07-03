@@ -10,7 +10,7 @@ const products = [
   },
   {
     nama: "Parting Paha Bawah",
-    gambar: "/images/paha.png",
+    gambar: "/images/Paha.png",
     deskripsi: "Potongan paha bawah ayam pilihan dengan kualitas terbaik, tekstur lembut, dan cocok untuk berbagai kebutuhan kuliner maupun industri.",
   },
   {
@@ -35,17 +35,17 @@ const products = [
   },
     {
     nama: "Ikan",
-    gambar: "/images/Ikan.png",
+    gambar: "/images/ikan.png",
     deskripsi: "Ikan segar berkualitas tinggi dengan kesegaran yang selalu terjaga.",
   },
   {
     nama: "Telur",
-    gambar: "/images/Telur.png",
+    gambar: "/images/telur.png",
     deskripsi: "Telur ayam segar pilihan dengan kualitas terbaik untuk berbagai kebutuhan.",
   },
   {
     nama: "Bebek",
-    gambar: "/images/Bebek.png",
+    gambar: "/images/bebek.png",
     deskripsi: "Bebek segar berkualitas premium, cocok untuk berbagai olahan kuliner.",
   },
 ];
