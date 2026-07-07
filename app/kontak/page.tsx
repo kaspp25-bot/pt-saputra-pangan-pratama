@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useState } from "react";
@@ -6,6 +7,33 @@ import Navbar from "../components/Navbar";
 
 
 export default function Kontak() {
+  const [nama, setNama] = useState("");
+const [email, setEmail] = useState("");
+const [wa, setWa] = useState("");
+const [pesan, setPesan] = useState("");
+
+const kirimWA = (e: React.FormEvent) => {
+  e.preventDefault();
+
+  const nomorWA = "628192500644"; // nomor tanpa +
+
+  const text = `Halo PT Saputra Pangan Pratama,
+
+Saya ingin menghubungi perusahaan.
+
+Nama : ${nama}
+Email : ${email}
+WhatsApp : ${wa}
+
+Pesan :
+${pesan}
+
+Terima kasih.`;
+
+  const url = `https://wa.me/${nomorWA}?text=${encodeURIComponent(text)}`;
+
+  window.open(url, "_blank");
+};
   return (
     <main className="min-h-screen bg-white pt-24">
 
@@ -46,9 +74,15 @@ export default function Kontak() {
                   📍 Alamat
                 </h3>
 
-                <p className="text-gray-600 mt-2">
-                  Jl. Raya Leuwinanggung, Leuwinanggung, Kec. Tapos, Kota Depok, Jawa Barat 16456
-                </p>
+               <a
+  href="https://maps.google.com/?q=Jl.+Raya+Leuwinanggung,+Leuwinanggung,+Tapos,+Depok"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="text-gray-600 mt-2 block hover:text-green-700 hover:underline"
+>
+  Jl. Raya Leuwinanggung, Leuwinanggung, Kec. Tapos,
+  Kota Depok, Jawa Barat 16456
+</a>
               </div>
 
               <div>
@@ -56,9 +90,14 @@ export default function Kontak() {
                   📞 Telepon
                 </h3>
 
-                <p className="text-gray-600 mt-2">
-                  +62 819-2500-644
-                </p>
+                <a
+  href="https://wa.me/628192500644"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="text-gray-600 mt-2 block hover:text-green-700 hover:underline"
+>
+  +62 819-2500-644
+</a>
               </div>
 
               <div>
@@ -66,9 +105,12 @@ export default function Kontak() {
                   ✉️ Email
                 </h3>
 
-                <p className="text-gray-600 mt-2">
-                  kaspp@saputrapanganpratama.com
-                </p>
+               <a
+  href="mailto:kaspp@saputrapanganpratama.com"
+  className="text-gray-600 mt-2 block hover:text-green-700 hover:underline"
+>
+  kaspp@saputrapanganpratama.com
+</a>
               </div>
 
               <div>
@@ -95,37 +137,49 @@ export default function Kontak() {
               Kirim Pesan
             </h2>
 
-            <form className="space-y-6">
+            <form onSubmit={kirimWA} className="space-y-6">
+
+             <input
+  type="text"
+  placeholder="Nama Lengkap"
+  value={nama}
+  onChange={(e) => setNama(e.target.value)}
+  className="w-full border rounded-lg p-4"
+  required
+/>
 
               <input
-                type="text"
-                placeholder="Nama Lengkap"
-                className="w-full border rounded-lg p-4"
-              />
+  type="email"
+  placeholder="Email"
+  value={email}
+  onChange={(e) => setEmail(e.target.value)}
+  className="w-full border rounded-lg p-4"
+  required
+/>
 
-              <input
-                type="email"
-                placeholder="Email"
-                className="w-full border rounded-lg p-4"
-              />
+             <input
+  type="text"
+  placeholder="Nomor WhatsApp"
+  value={wa}
+  onChange={(e) => setWa(e.target.value)}
+  className="w-full border rounded-lg p-4"
+  required
+/>
 
-              <input
-                type="text"
-                placeholder="Nomor WhatsApp"
-                className="w-full border rounded-lg p-4"
-              />
-
-              <textarea
-                rows={5}
-                placeholder="Tulis pesan..."
-                className="w-full border rounded-lg p-4"
-              ></textarea>
-
-              <button
-                className="w-full bg-green-800 hover:bg-green-900 text-white py-4 rounded-lg font-semibold"
-              >
-                Kirim Pesan
-              </button>
+             <textarea
+  rows={5}
+  placeholder="Tulis pesan..."
+  value={pesan}
+  onChange={(e) => setPesan(e.target.value)}
+  className="w-full border rounded-lg p-4"
+  required
+></textarea>
+             <button
+  type="submit"
+  className="w-full bg-green-800 hover:bg-green-900 text-white py-4 rounded-lg font-semibold"
+>
+  Kirim Pesan
+</button>
 
             </form>
 
