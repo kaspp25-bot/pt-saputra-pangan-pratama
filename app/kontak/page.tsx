@@ -193,7 +193,7 @@ Terima kasih.`;
 <section className="pb-24">
   <div className="overflow-hidden rounded-2xl shadow-lg">
     <iframe
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3675.7664381120726!2d106.89938761018165!3d-6.41052789355346!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69eb00534abc25%3A0x93de082901fa0349!2sPT%20Mitra%20Saputra%20Cold%20Storage!5e1!3m2!1sid!2sid!4v1782803094242!5m2!1sid!2sid"
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3675.797682855087!2d106.89546891018173!3d-6.406191693557795!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69ebe5685f88af%3A0x5ed4e3813bc1fd88!2sPT%20Saputra%20Pangan%20Pratama!5e1!3m2!1sid!2sid!4v1783667149484!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"
       width="100%"
       height="450"
       style={{ border: 0 }}

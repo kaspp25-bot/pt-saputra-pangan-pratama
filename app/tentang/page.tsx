@@ -73,10 +73,11 @@ export default function Tentang() {
           </h2>
 
           <p className="mt-8 text-gray-600 leading-8">
-            Berawal dari usaha distribusi pangan berskala lokal,
-            PT Saputra Pangan Pratama terus berkembang melalui komitmen
-            terhadap kualitas produk, pelayanan pelanggan, dan pengiriman
-            yang tepat waktu hingga mampu melayani berbagai wilayah di Indonesia.
+            PT Saputra Pangan Pratama merupakan perusahaan yang bergerak di bidang penyediaan dan distribusi produk pangan, dengan fokus utama pada produk ayam serta berbagai komoditas pangan hewani lainnya. Berbekal pengalaman lebih dari 10 tahun di industri pangan, kami terus berkomitmen menghadirkan produk yang berkualitas, aman, higienis, dan terpercaya untuk memenuhi kebutuhan rumah tangga, pelaku usaha kuliner, hingga mitra bisnis di Indonesia.
+
+
+Didukung oleh tim yang berpengalaman, kami senantiasa adaptif dalam menghadapi berbagai kondisi iklim dan dinamika pasar guna memastikan kualitas produk serta kontinuitas pasokan tetap terjaga. Dengan mengusung nilai Integrity, Trust & Commitment, PT Saputra Pangan Pratama terus membangun sistem distribusi yang profesional, efisien, dan berorientasi pada kepuasan pelanggan
+
           </p>
 
         </div>
@@ -177,6 +178,130 @@ export default function Tentang() {
         </div>
 
       </section>
+
+      
+
+  {/*Mitra*/}
+<section className="py-24 bg-gray-50">
+
+<div className="max-w-7xl mx-auto px-8">
+
+<h2 className="text-4xl font-bold text-center text-green-900 mb-5">
+Dipercaya Berbagai Mitra
+</h2>
+
+<p className="text-center text-gray-600 mb-14">
+Kami telah menjalin kerja sama dengan berbagai sektor usaha
+dalam memenuhi kebutuhan distribusi produk pangan.
+</p>
+
+<div className="grid md:grid-cols-3 gap-6">
+
+<div className="bg-white p-8 rounded-xl shadow text-center">
+🏨
+<h3 className="font-bold mt-3">Hotel</h3>
+</div>
+
+<div className="bg-white p-8 rounded-xl shadow text-center">
+🍽
+<h3 className="font-bold mt-3">Restaurant</h3>
+</div>
+
+<div className="bg-white p-8 rounded-xl shadow text-center">
+🛒
+<h3 className="font-bold mt-3">Retail</h3>
+</div>
+
+<div className="bg-white p-8 rounded-xl shadow text-center">
+🏭
+<h3 className="font-bold mt-3">Industri</h3>
+</div>
+
+<div className="bg-white p-8 rounded-xl shadow text-center">
+🥩
+<h3 className="font-bold mt-3">Frozen Food</h3>
+</div>
+
+<div className="bg-white p-8 rounded-xl shadow text-center">
+🍱
+<h3 className="font-bold mt-3">Catering</h3>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+{/* Dokumentasi */}
+
+<section className="py-24">
+
+<div className="max-w-7xl mx-auto px-8">
+
+<h2 className="text-4xl font-bold text-center text-green-900">
+
+Dokumentasi Kegiatan
+
+</h2>
+
+<p className="text-center text-gray-600 mt-5">
+
+Dokumentasi aktivitas operasional perusahaan.
+
+</p>
+
+<div className="grid md:grid-cols-3 gap-8 mt-14">
+
+{[
+"Gudang",
+"Loading Barang",
+"Cold Storage",
+"Distribusi",
+"Meeting",
+"Operasional",
+].map((item)=>(
+
+<div
+key={item}
+className="bg-gray-100 rounded-2xl overflow-hidden shadow"
+>
+
+<div className="h-64 bg-gray-300 flex items-center justify-center">
+
+<span className="text-gray-500">
+
+Foto {item}
+
+</span>
+
+</div>
+
+<div className="p-5">
+
+<h3 className="font-bold text-lg text-green-900">
+
+{item}
+
+</h3>
+
+<p className="text-gray-600 mt-2">
+
+Dokumentasi akan diperbarui setelah kegiatan berlangsung.
+
+</p>
+
+</div>
+
+</div>
+
+))}
+
+</div>
+
+</div>
+
+</section>
 
       {/* Legalitas */}
 
