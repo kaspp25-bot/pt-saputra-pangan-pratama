@@ -3,6 +3,40 @@ import Navbar from "../components/Navbar";
 import Link from "next/link";
 
 export default function Tentang() {
+
+  const dokumentasi = [
+    {
+      title:"Gudang",
+      image:"/images/gudang1.jpeg",
+      desc:"Area penyimpanan produk."
+    },
+    {
+      title:"Loading Barang",
+      image:"/images/loading1.jpeg",
+      desc:"Proses loading barang."
+    },
+    {
+      title:"Cold Storage",
+      image:"/images/coldstorage.jpeg",
+      desc:"Penyimpanan suhu dingin."
+    },
+    {
+      title:"Distribusi",
+      image:"/images/distribusi.jpeg",
+      desc:"Distribusi produk."
+    },
+    {
+      title:"Meeting",
+      image:"/images/meeting.jpeg",
+      desc:"Meeting Dengan Customer."
+    },
+    {
+      title:"Operasional",
+      image:"/images/operasional.jpeg",
+      desc:"Operasional harian."
+    }
+  ];
+
   return (
     <main className="min-h-screen bg-white pt-28">
 
@@ -30,7 +64,7 @@ export default function Tentang() {
 
           <div className="relative h-[420px] rounded-2xl overflow-hidden shadow-lg">
   <Image
-    src="/images/depan.png"
+    src="/images/depan.jpeg"
     alt="Gedung PT Saputra Pangan Pratama"
     fill
     className="object-cover"
@@ -232,74 +266,60 @@ dalam memenuhi kebutuhan distribusi produk pangan.
 </div>
 
 </section>
-
 {/* Dokumentasi */}
 
 <section className="py-24">
 
-<div className="max-w-7xl mx-auto px-8">
+  <div className="max-w-7xl mx-auto px-8">
 
-<h2 className="text-4xl font-bold text-center text-green-900">
+    <h2 className="text-4xl font-bold text-center text-green-900">
+      Dokumentasi Kegiatan
+    </h2>
 
-Dokumentasi Kegiatan
+    <p className="text-center text-gray-600 mt-5">
+      Dokumentasi aktivitas operasional perusahaan.
+    </p>
 
-</h2>
+    <div className="grid md:grid-cols-3 gap-8 mt-14">
 
-<p className="text-center text-gray-600 mt-5">
+      {dokumentasi.map((item) => (
 
-Dokumentasi aktivitas operasional perusahaan.
+        <div
+          key={item.title}
+          className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition"
+        >
 
-</p>
+       <div className="overflow-hidden">
 
-<div className="grid md:grid-cols-3 gap-8 mt-14">
-
-{[
-"Gudang",
-"Loading Barang",
-"Cold Storage",
-"Distribusi",
-"Meeting",
-"Operasional",
-].map((item)=>(
-
-<div
-key={item}
-className="bg-gray-100 rounded-2xl overflow-hidden shadow"
->
-
-<div className="h-64 bg-gray-300 flex items-center justify-center">
-
-<span className="text-gray-500">
-
-Foto {item}
-
-</span>
+<Image
+  src={item.image}
+  alt={item.title}
+  width={600}
+  height={400}
+  className="w-full h-64 object-cover"
+/>
 
 </div>
 
-<div className="p-5">
+          <div className="p-6 flex flex-col items-center">
 
-<h3 className="font-bold text-lg text-green-900">
-
-{item}
-
+<h3 className="text-xl font-bold text-green-900">
+  {item.title}
 </h3>
 
-<p className="text-gray-600 mt-2">
-
-Dokumentasi akan diperbarui setelah kegiatan berlangsung.
-
+<p className="text-gray-600 mt-2 text-center">
+  {item.desc}
 </p>
 
 </div>
 
-</div>
+        </div>
 
-))}
+      ))}
 
-</div>
+    </div>
 
-</div>
+  </div>
 
 </section>
 

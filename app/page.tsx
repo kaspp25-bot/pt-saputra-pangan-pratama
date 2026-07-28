@@ -45,7 +45,7 @@ export default function Home() {
 
          <div className="relative h-[420px] rounded-2xl overflow-hidden shadow-xl">
   <Image
-    src="/images/gudang.png"
+    src="/images/gudang.jpeg"
     alt="Gudang PT Saputra Pangan Pratama"
     fill
     className="object-cover"
