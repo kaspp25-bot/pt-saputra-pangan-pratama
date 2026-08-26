@@ -27,7 +27,7 @@ export default function Tentang() {
     },
     {
       title:"Meeting",
-      image:"/images/meeting.jpeg",
+      image:"/images/Meting.jpeg",
       desc:"Meeting Dengan Customer."
     },
     {
